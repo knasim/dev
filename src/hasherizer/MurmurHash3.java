@@ -29,15 +29,6 @@ public final class MurmurHash3
 		String name = "Khurrum";
 		//System.out.println(name.hashCode());
 		
-		String programName = "Lam 21\" Upgrader";
-		String duh1 = "Lam 21\\\\\" Upgrader";
-		String queryString = "AIR_Name:\"" + LUCENE_PATTERN.matcher(programName).replaceAll(REPLACEMENT_STRING) + "\" AND AIR_DocumentMilestone:\"" + "\"";
-		String queryString2 = "AIR_Name:\"" + LUCENE_PATTERN.matcher(programName).replaceAll(REPLACEMENT_STRING);
-		String orig = "AIR_Name:\"" + programName+ "\"";
-		System.out.println(queryString);
-		String mmm = "Lam 21\\" Upgrader" AND AIR_DocumentMilestone:"";
-		System.out.println(orig);
-		
 	}
 	
 	private MurmurHash3()

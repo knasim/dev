@@ -2,8 +2,8 @@ package stringerizer;
 
 public class MultiDimenArray {
 
-	public static final String[][] SERVICES_AND_DESCRIPTIONS = {{"Air Force", "Army", "Navy", "DoD" },
-		{"Department of Air Force", "Department of Army", "Department of Navy", "Joint and DoD"}};
+	public static final String[][] SERVICES_AND_DESCRIPTIONS = {{"Food", "Energy", "Resources", "Govt" },
+		{"Agriculture", "Nuclear Energy", "Land Exploration", "Policy"}};
 	
 	public static void main(String[] args) {
 		

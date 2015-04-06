@@ -37,7 +37,7 @@ public class Jsonerizer {
 				Jsonerizer json = new Jsonerizer();
 				try {
 					JsonObject jobj = json.buildJsonObject();
-					json.buildJsonObject("http://localhost:8090/rest/apidrone/1.0/message/apidrone.json");
+					json.buildJsonObject("http://localhost:80");
 					System.out.println("\n");
 				} catch (SomethingHappenedException e) {
 					try {
@@ -68,10 +68,7 @@ public class Jsonerizer {
 	public void buildJsonObject(String in) throws SomethingHappenedException {
 			JsonReader reader = Json.createReader(In(in));
 			JsonObject obj= reader.readObject();
-		    //String results = obj.getJ("milestones");
-		    //JsonArray array = results.getJsonArray("persons");
-		    //JsonArray array = results.getJsonArray(0);
-			JsonArray results = (JsonArray) obj.get("milestones");
+			JsonArray results = (JsonArray) obj.get("objects");
 			System.out.println("----------------------------------");
 			   for (JsonValue result : results) {
 			    
@@ -94,7 +91,7 @@ public class Jsonerizer {
 	        		site = (HttpURLConnection) url.openConnection();
 	        	}
 	        	else {
-	        		Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("131.84.11.215", 9119));
+	        		Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("my.proxy.out.address", 0000));
 	        		site = (HttpURLConnection) url.openConnection(proxy);
 	        	}
 	        	
